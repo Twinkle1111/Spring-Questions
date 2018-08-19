@@ -1,0 +1,161 @@
+1. What are the primitive data types?
+Ans:
+8
+1.int
+2.boolean
+3.char
+4.short
+5.byte
+6.float
+7.long
+8.double
+Write the default values for them.
+Ans:int -0
+	boolean-false
+	char-'\u000'
+	short-0
+	byte-0
+	float-0.0f
+	long-0L
+	double-0.0d
+	
+ Write the equivalent wrapper classes for them.
+ Ans:boolean-Boolean
+	float:Float
+	long:Long
+	short:Short
+	double:Double
+	char:Char
+	byte:Byte
+	int:Integer
+2. Is this following statement correct for the Employee class 
+ Object obj=new Employee();
+ yes It's true Because Object is base for all class.
+
+3. If A is the Parent class of B then can we write A a=new B();
+Yes we can write this .
+4. Correct the error if any.
+
+class A 
+{
+	
+}
+class B extends A 
+{
+
+}
+public class App 
+{
+	public static void main(String[] args)
+	{
+		getMyB();
+	}
+	
+	public B getMyB()
+	{
+		return new A();
+	}
+}
+Yes,There is Error,it will show error in getMyB() cases.First It will show error because it is called without object name and we have to create the instance first and then we have to call the method by insatance name.Then the second error will arise Because in child case return type we have assigned here base class return type.
+5. write single statement here to display the output. Read main method below for instructions.
+
+abstract class A 
+{
+	abstract public void m1();
+	
+	public void m2()
+	{
+		m1();
+		m3();
+	}
+	
+	public void m3()
+	{
+		System.out.println("Hello");
+	}
+}
+
+class B extends A 
+{
+	public void m1()
+	{
+		System.out.println("Hi");
+	}
+	
+	public void m3()
+	{
+		System.out.println("Bye");
+	}
+}
+
+public class App 
+{
+	public static void main(String[] args)
+	{
+		A aa=new B();
+		aa.m1();
+		aa.m3();
+		OR
+		B bb=new B();
+		bb.m1();
+		bb.m3();
+		// output must be like below 
+		// Hi
+		// Bye
+	}
+}
+
+6.  Read the main method below for instructions.
+interface IA
+{
+	public void m1();
+}
+
+class AImpl implements IA 
+{
+	public void m1()
+	{
+		System.out.println("Welcome");
+	}
+}
+
+
+class BImpl implements IA 
+{
+	public void m1()
+	{
+		System.out.println("Good Bye");
+	}
+}
+
+public class App 
+{
+	public static void main(String[] args)
+	{
+		IA a= .........new AImpl() ;
+		a.m1();// fill the above blank to get output as : Welcome 
+		
+		IA b=......... new BImpl();
+		b.m1(); // fill the above blank to get the output as : Good Bye
+		
+	}
+}
+
+7. interface IEmployee
+{
+
+}
+
+Object obj=new IEmployee();
+
+Justify if this statement is valid or not?
+NO,it's not valid
+
+8. abstract class AbstractEmployeeeManager
+{
+
+}
+
+AbstractEmployeeeManager  mgr=new  AbstractEmployeeeManager ();
+Justify if this statement is valid or not? 
+NO it's completely invalid.
